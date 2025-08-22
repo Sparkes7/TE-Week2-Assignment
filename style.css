@@ -146,7 +146,37 @@ nav a {
 
 #about {
   background-color: black;
-  height: 100vh;
+  color: white;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-info {
+  line-height: 1.5;
+  text-align: center;
+  display: inline-flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.about-info-title h2 {
+  font-size: 2rem;
+  line-height: 1.5;
+  overflow-y: hidden;
+}
+.about-info-title h3 {
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+.about-info-paragraph {
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  font-weight: 300;
+  line-height: 2;
 }
 
 #contact {
@@ -192,6 +222,10 @@ footer > strong {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 20px));
     padding: 0.5rem 1rem;
   }
+
+  .about-info-paragraph {
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -213,5 +247,9 @@ footer > strong {
   }
   #thumbnail-container {
     grid-template-columns: repeat(auto-fit, minmax(20rem, 20px));
+  }
+
+  .about-info-paragraph {
+    padding: 0% 20%;
   }
 }
