@@ -123,6 +123,7 @@ for (i = 0; i < images.length; i++) {
   image.classList.add("thumbnail-image");
   image.setAttribute("data-index", i);
   image.setAttribute("src", images[i].thumbnail);
+  image.setAttribute("alt", images[i].altText);
   image.setAttribute("aria-label", `Gallery image ${i + 1}`);
   image.addEventListener("click", function () {
     imageToDisplay = image.getAttribute("data-index");
