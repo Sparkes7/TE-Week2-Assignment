@@ -222,8 +222,75 @@ nav a:focus {
 }
 
 #contact {
-  height: 100vh;
+  padding: 3rem 1rem;
   background-color: rgb(10, 10, 10);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+#contact > h2 {
+  font-size: 1.5rem;
+}
+#contact > p {
+  font-size: 1rem;
+  font-weight: 200;
+  padding: 0% 20%;
+}
+
+form {
+  font: "Roboto";
+  display: grid;
+  gap: 1rem;
+  width: 80%;
+  margin: auto;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 1ex 1ex;
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+label {
+  text-align: left;
+}
+
+.required {
+  color: crimson;
+}
+.optional {
+  color: rgb(150, 150, 150);
+  text-transform: lowercase;
+}
+
+.input-group {
+  display: grid;
+}
+.input-group.message {
+  grid-column: 1/-1;
+}
+.submit {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  width: 50%;
+  border-radius: 2rem;
+  transition: all 0.15s;
+}
+
+.submit:focus,
+.submit:hover {
+  background-color: white;
+  color: black;
 }
 
 footer {
@@ -326,7 +393,12 @@ footer > strong {
 
   .about-info-container {
     flex-direction: row;
-    padding: 0rem 5rem;
+    justify-content: space-evenly;
+    padding: 0rem 0rem;
+  }
+
+  .about-info {
+    width: 30%;
   }
 
   .close-image {
@@ -350,6 +422,11 @@ footer > strong {
 
   .about-heading {
     font-size: 2rem;
+  }
+
+  form {
+    grid-template-columns: 1fr 1fr;
+    max-width: 800px;
   }
 
   #back-to-top {

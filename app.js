@@ -1,52 +1,52 @@
 const images = [
   {
-    title: `A city at night by "Alef_photograph"`,
+    title: `"A city at night" by Alef_photograph`,
     filePath: "./images/bustling-korea.jpg",
     altText:
       "A bustling Korean highrise cityscape at night lit by the cities light",
     thumbnail: "./thumbnails/bustling-korea-thumb.jpg",
   },
   {
-    title: `Buildings at night by "Pexels"`,
+    title: `"Buildings at night" by Pexels`,
     filePath: "./images/resort.jpg",
     altText: "Buildings lit at night",
     thumbnail: "./thumbnails/resort-thumb.jpg",
   },
   {
-    title: "Industrial Snow by Lukas Lehotsky",
+    title: `"Industrial Snow" by Lukas Lehotsky`,
     filePath: "./images/snowy-powerplant.jpg",
     altText: "A photo of a powerplant at night in the snow",
     thumbnail: "./thumbnails/snowy-powerplant-thumb.jpg",
   },
   {
-    title: "Feet Overhanging",
+    title: `"Escaping Concrete Jungles" by Anthony Intraversato`,
     filePath: "./images/city-overhang.jpg",
     altText: "person wearing blue jeans facing cityscape during nighttime",
     thumbnail: "./thumbnails/city-overhang-thumb.jpg",
   },
   {
-    title: `Golden Gate by "Mooloom"`,
+    title: `"Golden Gate" by Mooloom`,
     filePath: "./images/golden-gate.jpg",
     altText:
       "The Golden Gate Bridge in San Francisco spanning over the ocean to a city of lights at night",
     thumbnail: "./thumbnails/golden-gate-thumb.jpg",
   },
   {
-    title: `Manhattan From Space by "NASA"`,
+    title: `"Manhattan From Space" by NASA`,
     filePath: "./images/nasa-manhattan.jpg",
     altText:
       "An night-time aerial view of Manhattan, New York taken from the International Space Station",
     thumbnail: "./thumbnails/nasa-manhattan-thumb.jpg",
   },
   {
-    title: `Presence by "Hikarinoshita Hikari"`,
+    title: `"Presence" by Hikarinoshita Hikari`,
     filePath: "./images/light-pollution.jpg",
     altText:
       "A dark body of water at night with an explosion of light pollution in the distance",
     thumbnail: "./thumbnails/light-pollution-thumb.jpg",
   },
   {
-    title: `Forest Fire by "Matt Howard"`,
+    title: `"Smolder" by Matt Howard`,
     filePath: "./images/forest-fire.jpg",
     altText: "A large-scale smoggy forest fire at night",
     thumbnail: "./thumbnails/forest-fire-thumb.jpg",
