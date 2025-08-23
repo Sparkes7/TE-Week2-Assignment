@@ -96,14 +96,17 @@ featuredInfo.appendChild(featuredInfoText);
 const prevImageButton = document.createElement("button");
 prevImageButton.classList.add("feature-button", "prev-image");
 prevImageButton.textContent = "<";
+prevImageButton.setAttribute("aria-label", "Go to previous image");
 
 const nextImageButton = document.createElement("button");
 nextImageButton.classList.add("feature-button", "next-image");
 nextImageButton.textContent = ">";
+nextImageButton.setAttribute("aria-label", "Go to next image");
 
 const closeImageButton = document.createElement("button");
 closeImageButton.classList.add("close-image");
 closeImageButton.textContent = "Close Image";
+closeImageButton.setAttribute("aria-label", "Close image overlay");
 
 featureContainer.appendChild(featuredImageContainer);
 featureContainer.appendChild(featuredInfo);
@@ -120,6 +123,7 @@ for (i = 0; i < images.length; i++) {
   image.classList.add("thumbnail-image");
   image.setAttribute("data", i);
   image.setAttribute("src", images[i].thumbnail);
+  image.setAttribute("aria-label", `Gallery image ${i + 1}`);
   image.addEventListener("click", function () {
     imageToDisplay = image.getAttribute("data");
     toggleImage();

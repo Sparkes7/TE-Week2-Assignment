@@ -5,7 +5,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+  scroll-behavior: smooth;
+  text-decoration: none;
 }
 body {
   font-family: "Roboto";
@@ -35,6 +37,7 @@ body {
   background-color: rgb(255, 255, 255);
   border-radius: 0.35rem;
   padding: 0.125rem;
+  max-height: 100vh;
 }
 
 .featured-image-container {
@@ -119,16 +122,30 @@ header {
 
 .branding {
   font-size: 1.5rem;
+  font-weight: 900;
 }
 
 nav {
   display: flex;
   gap: 2rem;
+  font-weight: 500;
 }
 
 nav a {
   color: white;
   text-decoration: none;
+  transition: all 0.15s;
+  padding: 0.5rem 0.8rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  transform: translateY(-2px);
+}
+
+nav a:focus {
+  background-color: white;
+  color: black;
 }
 
 #gallery {
@@ -148,10 +165,15 @@ nav a {
 .thumbnail {
   max-width: 10rem;
   max-height: 10rem;
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   justify-self: center;
   overflow-y: hidden;
 }
+
+.thumbnail:hover {
+  border-color: white;
+}
+
 .thumbnail-image {
   height: 100%;
   object-fit: cover;
@@ -160,36 +182,43 @@ nav a {
 #about {
   background-color: black;
   color: white;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.about-heading {
+  font-size: 1.5rem;
+  padding: 0rem 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.about-info-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 }
 
 .about-info {
+  margin-top: 2rem;
   line-height: 1.5;
   text-align: center;
   display: inline-flex;
   flex-direction: column;
-  padding: 2rem;
 }
 
-.about-info-title h2 {
-  font-size: 2rem;
-  line-height: 1.5;
-  overflow-y: hidden;
-}
-.about-info-title h3 {
-  font-size: 1.2rem;
-  font-weight: 200;
+.about-info > h3 {
+  font-weight: 500;
+  font-size: 1.3rem;
+  text-transform: uppercase;
 }
 
 .about-info-paragraph {
   font-size: 0.8rem;
-  margin-top: 1rem;
-  font-weight: 300;
+  font-weight: 200;
   line-height: 2;
+  padding: 0rem 2rem;
 }
 
 #contact {
@@ -212,6 +241,25 @@ footer > p {
 }
 footer > strong {
   font-weight: 900;
+}
+
+#back-to-top {
+  font-size: 0.6rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  padding: 0.5rem 0.8rem;
+  border-radius: 2rem;
+  transition: all 0.15s;
+}
+
+#back-to-top:hover,
+#back-to-top:focus {
+  background-color: white;
+  color: black;
 }
 
 /* =============================== */
@@ -276,8 +324,9 @@ footer > strong {
     grid-template-columns: repeat(auto-fit, minmax(20rem, 20px));
   }
 
-  .about-info-paragraph {
-    padding: 0% 20%;
+  .about-info-container {
+    flex-direction: row;
+    padding: 0rem 5rem;
   }
 
   .close-image {
@@ -297,5 +346,13 @@ footer > strong {
     color: rgb(20, 20, 20);
     font-size: 0.85rem;
     margin-bottom: 0.5rem;
+  }
+
+  .about-heading {
+    font-size: 2rem;
+  }
+
+  #back-to-top {
+    font-size: 1rem;
   }
 }
