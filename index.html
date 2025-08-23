@@ -75,6 +75,7 @@
               id="name"
               type="text"
               aria-label="form input name required"
+              aria-required="true"
             />
           </div>
           <div class="input-group">
@@ -84,6 +85,7 @@
               name="email"
               id="email"
               aria-label="form input email required"
+              aria-required="true"
             />
           </div>
           <div class="input-group">
@@ -94,11 +96,17 @@
               id="phone"
               type="text"
               aria-label="form input phone optional"
+              aria-required="false"
             />
           </div>
           <div class="input-group message">
             <label for="message">Message</label>
-            <textarea name="message" id="message" rows="5"></textarea>
+            <textarea
+              aria-required="false"
+              name="message"
+              id="message"
+              rows="5"
+            ></textarea>
           </div>
           <div class="input-group"><input class="submit" type="submit" /></div>
         </form>
