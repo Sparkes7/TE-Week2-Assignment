@@ -59,6 +59,7 @@ for (i = 0; i < images.length; i++) {
 console.log(images);
 
 let imageToDisplay = 0;
+let isFeatureOpen = false;
 
 //initialise
 // create the section for the popup "feature", set the ID to "feature" and then append to body
@@ -162,8 +163,12 @@ function toggleImage() {
 
   if (featureSection.classList.contains("hidden")) {
     featureSection.classList.remove("hidden");
+    isFeatureOpen = true;
+    console.log(isFeatureOpen);
   } else if (!featureSection.classList.contains("hidden")) {
     featureSection.classList.add("hidden");
+    isFeatureOpen = false;
+    console.log(isFeatureOpen);
   }
 }
 
@@ -184,5 +189,9 @@ function handleKeyPress(key) {
     nextImage();
   } else if (key.key === "ArrowLeft") {
     prevImage();
+  } else if (key.key === "Escape") {
+    if (isFeatureOpen) {
+      toggleImage();
+    }
   }
 }
