@@ -121,11 +121,11 @@ for (i = 0; i < images.length; i++) {
   thumbnailDiv.classList.add("thumbnail");
   const image = document.createElement("img");
   image.classList.add("thumbnail-image");
-  image.setAttribute("data", i);
+  image.setAttribute("data-index", i);
   image.setAttribute("src", images[i].thumbnail);
   image.setAttribute("aria-label", `Gallery image ${i + 1}`);
   image.addEventListener("click", function () {
-    imageToDisplay = image.getAttribute("data");
+    imageToDisplay = image.getAttribute("data-index");
     toggleImage();
     console.log(imageToDisplay);
   });
