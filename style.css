@@ -26,7 +26,7 @@ body {
 }
 
 #feature-container {
-  margin: 2rem;
+  margin: 0.5rem;
   visibility: visible;
   display: flex;
   flex-direction: column;
@@ -34,12 +34,13 @@ body {
   align-items: center;
   background-color: rgb(255, 255, 255);
   border-radius: 0.35rem;
-  padding: 1rem;
+  padding: 0.125rem;
 }
 
 .featured-image-container {
   background-color: white;
   max-width: 1000px;
+  max-height: 90vh;
 }
 
 #featured-image {
@@ -55,19 +56,22 @@ body {
   width: 100%;
 }
 .featured-info > strong {
-  margin-top: 0.5rem;
   text-transform: uppercase;
+  font-size: 0.8rem;
 }
 .featured-info > p {
   color: rgb(20, 20, 20);
+  font-size: 0.6rem;
+  text-align: center;
+  padding: 0rem 1rem;
 }
 
 .feature-button {
   position: absolute;
-  border-radius: 1rem;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  border: 2px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
 }
 
 .feature-button:hover {
@@ -78,19 +82,28 @@ body {
 .prev-image {
   left: 1rem;
   top: 50%;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.75rem;
 }
 
 .next-image {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.75rem;
   right: 1rem;
   top: 50%;
 }
 
 .close-image {
   padding: 0.5rem 1rem;
-  top: 2rem;
-  right: 2rem;
+  margin: 0.5rem 0.5rem;
+  font-size: 0.7rem;
+  border-radius: 1rem;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+}
+.close-image:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
 }
 
 header {
@@ -200,6 +213,7 @@ footer > p {
 footer > strong {
   font-weight: 900;
 }
+
 /* =============================== */
 /* ======== MEDIA QUERIES ======== */
 /* =============================== */
@@ -226,6 +240,17 @@ footer > strong {
   .about-info-paragraph {
     font-size: 1rem;
   }
+  .featured-info > strong {
+    text-transform: uppercase;
+    font-size: 1;
+    padding: 0.25rem 3rem;
+  }
+
+  .featured-info > p {
+    color: rgb(20, 20, 20);
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -238,9 +263,11 @@ footer > strong {
     flex-direction: row;
     justify-content: space-between;
   }
+
   nav a {
     font-size: 1rem;
   }
+
   .thumbnail {
     min-width: 20rem;
     min-height: 20rem;
@@ -251,5 +278,24 @@ footer > strong {
 
   .about-info-paragraph {
     padding: 0% 20%;
+  }
+
+  .close-image {
+    position: absolute;
+    font-size: 1rem;
+    border-radius: 3rem;
+    top: 2rem;
+  }
+
+  .featured-info > strong {
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 0.5rem 3rem;
+  }
+
+  .featured-info > p {
+    color: rgb(20, 20, 20);
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
   }
 }

@@ -1,19 +1,55 @@
 const images = [
   {
-    title: "A city at night",
-    filePath: "./images/city-7358078_1920.jpg",
+    title: `A city at night by "Alef_photograph"`,
+    filePath: "./images/bustling-korea.jpg",
     altText:
       "A bustling Korean highrise cityscape at night lit by the cities light",
+    thumbnail: "./thumbnails/bustling-korea-thumb.jpg",
   },
   {
-    title: "Buildings at night",
-    filePath: "./images/buildings-1839647_1920.jpg",
+    title: `Buildings at night by "Pexels"`,
+    filePath: "./images/resort.jpg",
     altText: "Buildings lit at night",
+    thumbnail: "./thumbnails/resort-thumb.jpg",
   },
   {
-    title: "Industrial Snow",
-    filePath: "./images/lukas-lehotsky-ZEifAiol6Gk-unsplash.jpg",
-    altText: "A photo by Lukas Lehotsky",
+    title: "Industrial Snow by Lukas Lehotsky",
+    filePath: "./images/snowy-powerplant.jpg",
+    altText: "A photo of a powerplant at night in the snow",
+    thumbnail: "./thumbnails/snowy-powerplant-thumb.jpg",
+  },
+  {
+    title: "Feet Overhanging",
+    filePath: "./images/city-overhang.jpg",
+    altText: "person wearing blue jeans facing cityscape during nighttime",
+    thumbnail: "./thumbnails/city-overhang-thumb.jpg",
+  },
+  {
+    title: `Golden Gate by "Mooloom"`,
+    filePath: "./images/golden-gate.jpg",
+    altText:
+      "The Golden Gate Bridge in San Francisco spanning over the ocean to a city of lights at night",
+    thumbnail: "./thumbnails/golden-gate-thumb.jpg",
+  },
+  {
+    title: `Manhattan From Space by "NASA"`,
+    filePath: "./images/nasa-manhattan.jpg",
+    altText:
+      "An night-time aerial view of Manhattan, New York taken from the International Space Station",
+    thumbnail: "./thumbnails/nasa-manhattan-thumb.jpg",
+  },
+  {
+    title: `Presence by "Hikarinoshita Hikari"`,
+    filePath: "./images/light-pollution.jpg",
+    altText:
+      "A dark body of water at night with an explosion of light pollution in the distance",
+    thumbnail: "./thumbnails/light-pollution-thumb.jpg",
+  },
+  {
+    title: `Forest Fire by "Matt Howard"`,
+    filePath: "./images/forest-fire.jpg",
+    altText: "A large-scale smoggy forest fire at night",
+    thumbnail: "./thumbnails/forest-fire-thumb.jpg",
   },
 ];
 
@@ -23,7 +59,6 @@ for (i = 0; i < images.length; i++) {
 console.log(images);
 
 let imageToDisplay = 0;
-//const featuredImage = document.getElementById("featured-image");
 
 //initialise
 // create the section for the popup "feature", set the ID to "feature" and then append to body
@@ -60,15 +95,15 @@ featuredInfo.appendChild(featuredInfoText);
 // buttons
 const prevImageButton = document.createElement("button");
 prevImageButton.classList.add("feature-button", "prev-image");
-prevImageButton.textContent = "Prev";
+prevImageButton.textContent = "<";
 
 const nextImageButton = document.createElement("button");
 nextImageButton.classList.add("feature-button", "next-image");
-nextImageButton.textContent = "Next";
+nextImageButton.textContent = ">";
 
 const closeImageButton = document.createElement("button");
-closeImageButton.classList.add("feature-button", "close-image");
-closeImageButton.textContent = "Close";
+closeImageButton.classList.add("close-image");
+closeImageButton.textContent = "Close Image";
 
 featureContainer.appendChild(featuredImageContainer);
 featureContainer.appendChild(featuredInfo);
@@ -84,7 +119,7 @@ for (i = 0; i < images.length; i++) {
   const image = document.createElement("img");
   image.classList.add("thumbnail-image");
   image.setAttribute("data", i);
-  image.setAttribute("src", images[i].filePath);
+  image.setAttribute("src", images[i].thumbnail);
   image.addEventListener("click", function () {
     imageToDisplay = image.getAttribute("data");
     toggleImage();
@@ -119,8 +154,6 @@ function prevImage() {
 
 function toggleImage() {
   updateImage();
-
-  const featureSection = document.getElementById("feature");
 
   if (featureSection.classList.contains("hidden")) {
     featureSection.classList.remove("hidden");
