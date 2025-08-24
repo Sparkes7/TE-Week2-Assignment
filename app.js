@@ -190,7 +190,7 @@ function toggleImage() {
 }
 
 function updateImage() {
-  featuredImage.setAttribute("src", images[imageToDisplay].filePath);
+  featuredImage.setAttribute("src", images[imageToDisplay].filePath); // src still set as a backup for when srcset doesn't work
   featuredImage.setAttribute("srcset", images[imageToDisplay].sourceset);
   featuredInfoTitle.textContent = images[imageToDisplay].title;
   featuredInfoText.textContent = images[imageToDisplay].altText;
