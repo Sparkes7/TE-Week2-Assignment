@@ -2,6 +2,8 @@ const images = [
   {
     title: `"A city at night" by Alef_photograph`,
     filePath: "./images/bustling-korea.jpg",
+    sourceset:
+      "./images/bustling-korea-halfres.jpg, ./images/bustling-korea.jpg 768w, ",
     altText:
       "A bustling Korean highrise cityscape at night lit by the cities light",
     thumbnail: "./thumbnails/bustling-korea-thumb.jpg",
@@ -9,24 +11,30 @@ const images = [
   {
     title: `"Buildings at night" by Pexels`,
     filePath: "./images/resort.jpg",
+    sourceset: "./images/resort-halfres.jpg, ./images/resort.jpg 768w",
     altText: "Buildings lit at night",
     thumbnail: "./thumbnails/resort-thumb.jpg",
   },
   {
     title: `"Industrial Snow" by Lukas Lehotsky`,
     filePath: "./images/snowy-powerplant.jpg",
+    sourceset:
+      "./images/snowy-powerplant-halfres.jpg, ./images/snowy-powerplant.jpg 768w",
     altText: "A photo of a powerplant at night in the snow",
     thumbnail: "./thumbnails/snowy-powerplant-thumb.jpg",
   },
   {
     title: `"Escaping Concrete Jungles" by Anthony Intraversato`,
     filePath: "./images/city-overhang.jpg",
+    sourceset:
+      "./images/city-overhang-halfres.jpg, ./images/city-overhang.jpg 768w",
     altText: "person wearing blue jeans facing cityscape during nighttime",
     thumbnail: "./thumbnails/city-overhang-thumb.jpg",
   },
   {
     title: `"Golden Gate" by Mooloom`,
     filePath: "./images/golden-gate.jpg",
+    sourceset: "./images/golden-gate-halfres.jpg, ./images/golden-gate.jpg",
     altText:
       "The Golden Gate Bridge in San Francisco spanning over the ocean to a city of lights at night",
     thumbnail: "./thumbnails/golden-gate-thumb.jpg",
@@ -34,6 +42,8 @@ const images = [
   {
     title: `"Manhattan From Space" by NASA`,
     filePath: "./images/nasa-manhattan.jpg",
+    sourceset:
+      "./images/nasa-manhattan-halfres.jpg, ./images/nasa-manhattan.jpg 768w",
     altText:
       "An night-time aerial view of Manhattan, New York taken from the International Space Station",
     thumbnail: "./thumbnails/nasa-manhattan-thumb.jpg",
@@ -41,6 +51,8 @@ const images = [
   {
     title: `"Presence" by Hikarinoshita Hikari`,
     filePath: "./images/light-pollution.jpg",
+    sourceset:
+      "./images/light-pollution-halfres.jpg, ./images/light-pollution.jpg 768w",
     altText:
       "A dark body of water at night with an explosion of light pollution in the distance",
     thumbnail: "./thumbnails/light-pollution-thumb.jpg",
@@ -48,6 +60,8 @@ const images = [
   {
     title: `"Smolder" by Matt Howard`,
     filePath: "./images/forest-fire.jpg",
+    sourceset:
+      "./images/forest-fire-halfres.jpg, ./images/forest-fire.jpg 768w",
     altText: "A large-scale smoggy forest fire at night",
     thumbnail: "./thumbnails/forest-fire-thumb.jpg",
   },
@@ -174,6 +188,7 @@ function toggleImage() {
 
 function updateImage() {
   featuredImage.setAttribute("src", images[imageToDisplay].filePath);
+  featuredImage.setAttribute("srcset", images[imageToDisplay].sourceset);
   featuredInfoTitle.textContent = images[imageToDisplay].title;
   featuredInfoText.textContent = images[imageToDisplay].altText;
 }

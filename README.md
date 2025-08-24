@@ -4,20 +4,20 @@
 
 ### Goals:
 
-~~🎯 Implement responsive design methods to ensure the website works well on both small mobile screens and larger desktop screens (e.g., above 800px).~~
+~~🎯 Implement responsive design methods to ensure the website works well on both small mobile screens and larger desktop screens (e.g., above 800px).~~ DONE
 
 - Used 768px as a media query breakpoint for larger screens.
 
-~~🎯 Implement at least one meaningful media query so that there is a noticeable change between mobile and desktop view (an example is to change where the ‘thumbnail bar’ is positioned).~~
+~~🎯 Implement at least one meaningful media query so that there is a noticeable change between mobile and desktop view (an example is to change where the ‘thumbnail bar’ is positioned).~~ DONE
 
 - Header changes from flex-direction: row, to flex-direction: column, so that the branding and the navigation both fit on smaller screens.
 - Close Image button is displayed under the image closer to thumbs on mobile device -> when the screen size is larger, the button gets removed from the document flow and positioned absolutely, to keep the featured image title and text bar 'sleeker'
 
-~~🎯 Ensure all images have appropriate alt text attributes for accessibility.~~
+~~🎯 Ensure all images have appropriate alt text attributes for accessibility.~~ DONE
 
 - alt text provided for all images in the array of image objects.
 
-~~🎯 Correctly use event handlers to switch images based on user interactions.~~
+~~🎯 Correctly use event handlers to switch images based on user interactions.~~ DONE
 
 - Clicking on any thumbnail image will show a larger version of the image, showing a title and some descripting alt text.
 - On the larger image pop-up there area three additional buttons for Next, Previous and Close image.
@@ -26,13 +26,16 @@
 
 🏹 Use ‘srcset’ to specify which image will be used based on the size of the screen for optimal viewing experience.
 
-~~🏹 Add ARIA elements to improve accessibility, such as aria-label, aria-live, and other relevant attributes.~~
+~~🏹 Add ARIA elements to improve accessibility, such as aria-label, aria-live, and other relevant attributes.~~ DONE
 
 - added aria-label elements to all buttons and input fields on the website
+- added aria-required="true/false" to the form elements of the about section
 
-~~🏹 Implement key bindings for buttons to enhance navigation, such as using arrow keys to switch between images.~~
+~~🏹 Implement key bindings for buttons to enhance navigation, such as using arrow keys to switch between images.~~ DONE
 
 - Left and Right Arrow Keys call PrevImage() and nextImage() functions respectively to change the image when the larger image is showing. There are also buttons that appear next to larger images that call the same functions to navigate by clicking the buttons instead of arrow keys.
+
+- added escape key functionality to close the featured image.
 
 ### Prelude
 
@@ -64,10 +67,16 @@ To get around this, I wanted one variable (that I called imageToDisplay) that wa
 
 With efforts to continue to practice rendering to the DOM and ensuring that i'm appending the right elements to the correct containers, lines 65 to 115 in my app.js are responsible for creating my entire gallery structure with the correct elements and classes. This is a lot of lines of code for what could have just been done in HTML, but I count this as a win because I was able to practice creating nested elements into a structure that was suitable for the gallery.
 
-#### Javascript
+#### Refactoring code
 
-With Javascript being the main focus of this weeks assignment, I decided to do probably more Javascript than necessary.
+As I started creating functions that update my "featured image", whether that be by clicking a thumbnail, or navigating with the arrow buttons or arrow keys, I started to see a lot of repeat code. I put that repeated code block into its own function then replaced the code blocks with the function instead. I think in the end it has made the code much more readable.
+
+### Areas to improve
+
+Further understanding responsive design and the cascading nature of media queries is an area that I need to look into more. Towards the end of the styling I discovered that creating breakpoints of max-width starting from smaller resolutions first seemed to work quite well. I'm still trying to
 
 ### References
 
 [MDN: Data Attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/data-*)
+[MDN aria-label](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
+[Form Styling Essentials](https://www.youtube.com/watch?v=nuDpLN2dazU)
