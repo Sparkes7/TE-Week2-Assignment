@@ -85,6 +85,10 @@ Overall, I thought that if I was going to have any "spaghetti code" that it woul
 
 I believe that this week was a massive step forward for me. Not only did I manage to achieve goals set forth for the assignment, I applied it to a larger project that I'm very happy with as a portfolio piece. It was great to get my hands dirty with more javascript to create functionality past the week 1 assignment, and I've learned so much from this project.
 
+### Feedback
+
+I understand that this project was all about the javascript, therefore please feel free to only provide Javascript feedback if necessary, however open to any and all as always :)
+
 ### References
 
 [MDN: Data Attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/data-*)
