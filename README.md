@@ -4,36 +4,36 @@
 
 ### Goals:
 
-~~🎯 Implement responsive design methods to ensure the website works well on both small mobile screens and larger desktop screens (e.g., above 800px).~~ DONE
+~~✅ Implement responsive design methods to ensure the website works well on both small mobile screens and larger desktop screens (e.g., above 800px).~~ DONE
 
 - Used 768px as a media query breakpoint for larger screens.
 
-~~🎯 Implement at least one meaningful media query so that there is a noticeable change between mobile and desktop view (an example is to change where the ‘thumbnail bar’ is positioned).~~ DONE
+~~✅ Implement at least one meaningful media query so that there is a noticeable change between mobile and desktop view (an example is to change where the ‘thumbnail bar’ is positioned).~~ DONE
 
 - Header changes from flex-direction: row, to flex-direction: column, so that the branding and the navigation both fit on smaller screens.
 - Close Image button is displayed under the image closer to thumbs on mobile device -> when the screen size is larger, the button gets removed from the document flow and positioned absolutely, to keep the featured image title and text bar 'sleeker'
 
-~~🎯 Ensure all images have appropriate alt text attributes for accessibility.~~ DONE
+~~✅ Ensure all images have appropriate alt text attributes for accessibility.~~ DONE
 
 - alt text provided for all images in the array of image objects.
 
-~~🎯 Correctly use event handlers to switch images based on user interactions.~~ DONE
+~~✅ Correctly use event handlers to switch images based on user interactions.~~ DONE
 
 - Clicking on any thumbnail image will show a larger version of the image, showing a title and some descripting alt text.
 - On the larger image pop-up there area three additional buttons for Next, Previous and Close image.
 
 ### Stretch Goals
 
-~~🏹 Use ‘srcset’ to specify which image will be used based on the size of the screen for optimal viewing experience.~~
+~~✅ (??) Use ‘srcset’ to specify which image will be used based on the size of the screen for optimal viewing experience.~~
 
 - ?? Maybe implemented? 😅 TBD. Further ramblings on this in [areas to improve](#areas-to-improve)
 
-~~🏹 Add ARIA elements to improve accessibility, such as aria-label, aria-live, and other relevant attributes.~~ DONE
+~~✅ Add ARIA elements to improve accessibility, such as aria-label, aria-live, and other relevant attributes.~~ DONE
 
 - added aria-label elements to all buttons and input fields on the website
 - added aria-required="true/false" to the form elements of the about section
 
-~~🏹 Implement key bindings for buttons to enhance navigation, such as using arrow keys to switch between images.~~ DONE
+~~✅ Implement key bindings for buttons to enhance navigation, such as using arrow keys to switch between images.~~ DONE
 
 - Left and Right Arrow Keys call PrevImage() and nextImage() functions respectively to change the image when the larger image is showing. There are also buttons that appear next to larger images that call the same functions to navigate by clicking the buttons instead of arrow keys.
 
